@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Meteo</title>
+    <link rel="stylesheet" href="meteo.css">
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="containerForm">
+            <h1>Espace Météo</h1>
+            <form id="formWeather" >
+                <input type="text" name="nomville" placeholder="Veuillez renseigner la ville" id="CityInput">
+                <input type="date" name="date" placeholder="">
+                <button type="button" onclick="getWeather()">Rechercher</button>
+
+            </form>
+        </div>
+        <div class="box-weather">
+            <div id="cityCheck">
+                
+            </div>
+            <div class="weather">
+
+                <div class="box-sun box">
+                    <h2>Vent</h2>
+                    <span id="sp1"></span>
+                </div>
+                <div class="box-rain box">
+                    <h2>Nuage</h2>
+                    <span id="sp2"></span>
+                </div>
+                <div class="box-sun box">
+                    <h2  class="fa-solid fa-raindrops">Pluie</h2>
+                    <span id="sp3"></span>
+                </div>
+                <div class="box-rain box">
+                    <h2>Température</h2>
+                    <span id="sp4"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /*  city.addEventListener('click', e=> {
+        }) */
+        function getWeather() {
+            //e.preventDefault();
+            const city = document.getElementById('CityInput').value;
+            /* const formWeather = document.getElementById('formWeather'); */
+            const apiKey = ('8062d9b8fd5de215e4a24389d7fffb7b');
+            const apiUrl = (`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
+            console.log(city)
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => { console.log(data) 
+                let element = document.getElementById('cityCheck') 
+            element.innerHTML=city;
+            document.getElementById('cityCheck').innerHTML=data.name;
+            document.getElementById('sp1').innerHTML=data.wind.speed;
+            document.getElementById('sp2').innerHTML=data.clouds.all
+            document.getElementById('sp3').innerHTML=data.rain.h;
+            document.getElementById('sp4').innerHTML=data.main.temp;
+            })       
+        }
+
+    </script>
+</body>
+
+</html>

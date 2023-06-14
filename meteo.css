@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(to left, #eee , #eee);
+}
+.wrap{
+    width: 60%;
+    max-height: 100vh;
+    margin: 0 auto;
+    background-color: rgb(161, 190, 181);
+    
+}
+.containerForm{
+    width: 60%;
+    margin: 30px auto;
+    /* background-color: rgb(86, 97, 84); */
+}
+.containerForm h1{
+    text-align: center;
+    width: 100%;
+    color: rgb(109, 133, 109);
+    padding: 2rem 1rem;
+    margin: 0px auto;
+    font-size: 27px;
+    font-weight: bold;
+}
+form{
+    margin: 5px auto;
+}
+input,
+input:focus,
+input:active{
+    margin: 10px auto;
+    outline:none;
+    font-size:20px;
+    font-weight: 500;
+}
+::placeholder{
+    background:#eee;
+}
+input{
+    outline: none;
+    display: block;
+    width: 100%;
+    border: 2px solid rgb(232, 233, 232);
+    background:none;
+    border-bottom: 2px solid #eee ;
+    color: #eee;
+}
+/* .input:active{
+    border: 3px solid #eee;
+} */
+button{
+    display: block;
+    width: 122px;
+    margin: 10px auto;
+    background: none;
+    border: none;
+    color: rgb(109, 133, 109);
+    background-color: rgb(248, 253, 253);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 0.25rem 0.5rem; 
+    cursor: pointer;
+
+}
+
+ /*  ---==========box-weather===========----- */
+
+.box-weather{
+    padding-bottom: 5rem;
+}
+ .weather{
+    width: 60%;
+    max-height: auto;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 15px;
+    display:flex;
+    flex-wrap:wrap;
+    
+}
+#cityCheck{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 20px auto;
+    text-align: center;
+    color: #eee;
+    font-size: 23px;
+    font-weight: bold;
+}
+.box-sun{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    
+}
+.box{
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    color: gray;
+    border: 5px dotted rgb(161, 190, 181);
+   
+}
+.box h2{
+    text-align: center;
+}
+.box span{
+    width: 50px;
+    margin: 0 auto;
+    text-align: center;
+    color: blue;
+}
