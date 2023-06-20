@@ -17,7 +17,7 @@
             <h1>Espace Météo</h1>
             <form id="formWeather" >
                 <input type="text" name="nomville" placeholder="Veuillez renseigner la ville" id="CityInput">
-                <input type="date" name="date" placeholder="">
+               <!--  <input type="date" name="date" placeholder=""> -->
                 <button type="button" onclick="getWeather()">Rechercher</button>
 
             </form>
@@ -47,7 +47,12 @@
             </div>
         </div>
     </div>
-    <script>
+    <script> 
+        function f (){
+            d= new Date()
+        }
+        f()
+        console.log(f());
         /*  city.addEventListener('click', e=> {
         }) */
         function getWeather() {

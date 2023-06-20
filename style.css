@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    text-transform: capitalize;
 }
 body{
      background:#555 
@@ -10,6 +11,19 @@ a{
 }
 ul li{
     list-style-type: none;
+}
+.heading{
+    width: 80%;
+    text-align: center;
+    margin: 0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color: #fff;
+}
+.heading span {
+    color: salmon;
+
 }
 
 .banner{
@@ -54,7 +68,7 @@ nav a::after{
    transition :2s ease-in
 }
 nav a:hover{
-    color: rgb(218, 152, 152);
+    color: salmon;
 }
 nav a::after:hover{
     border-bottom: 1px solid ;
@@ -136,7 +150,7 @@ nav a::after:hover{
     transition: 1s ease-in-out;
 }
 .presentation-box .presentation .icon-joiner li a:hover{
-    color: rgb(218, 152, 152);
+    color:salmon;
     transform: skew(1,2);
 }
 
@@ -151,8 +165,20 @@ nav a::after:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform infinite  ease-in-out;
-        transition: transform 10s ease-in-out;
+   /*  transition: transform infinite  ease-in-out;
+        transition: transform 10s ease-in-out; */
+    animation : tourne 5s infinite ease-in-out; 
+}
+@keyframes tourne{
+    50%{
+        transfrom: rotate(360deg);
+        color: aqua;
+    
+    }
+    100%{
+            transfrom: rotate(360deg);
+        
+    }
 }
  .banner-image .polygon:hover{
      transform: rotate(360deg);
@@ -162,22 +188,21 @@ nav a::after:hover{
 .banner-text .banner-image .polygon .polygon1{
     width: 500px;
     height: 400px;
-   
     position: absolute;  
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);  
    /*  background-color: #eee; */
    background-color: #999;
    
 }
-.banner-image .polygon .polygon2{
+.banner-text .banner-image .polygon .polygon2{
     width: 300px;
     height: 500px;
     position: absolute;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);  
     /* background-color: #d6cbcb; */
-    background-color: #888;
+    background-color: salmon;
 }
-.banner-image .polygon .polygon3{
+.banner-text .banner-image .polygon .polygon3{
     width: 400px;
     height: 600px;
     /* position: absolute; */ 
@@ -187,42 +212,41 @@ nav a::after:hover{
     border-radius: 50%;
 }
 /*  ===========home responsivité============ */
-@media(max-width:995px){
+@media(max-width:996px){
     .banner-text{
+        width: 80%;
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        gap: 15px;
+        margin: 0 auto;
+    }
+    .presentation-box{
+      margin: 0 auto;
       display: block;
+    }
+    .banner-image{
+        width: 50%; 
+        margin: 5rem auto;
+        
     }
 
 }
 /*  ===========about============ */
- .heading{
-    text-align: center;
-    margin: 0 6rem;
-    font-size: 4rem;
-    padding: 1rem;
-    border-bottom: .1rem solid #fff4;
-    color: #fff;
-}
-.heading span {
-    color: salmon;
-
+.about{
+    width: 80%;
+    margin: 0 auto;
 }
 .about .row{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap:wrap;
-    padding: 1rem 0; */
 }
 .about .row .info{
-    flex: 1 1 48rem;
+    flex: 1 1 40rem;
     padding: 2rem 1rem;
-    padding-left: 6rem;
 }
 .about .row .info h3{
     font-size: 2rem;
-    color: var(--yellow);
+    color: salmon;
     padding: 1rem 0;
     font-weight: normal;   
 }
@@ -232,8 +256,6 @@ nav a::after:hover{
 
 }
 .about .row .counter{
-    flex: 1 1 48rem;
-    padding: 2rem 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -243,36 +265,81 @@ nav a::after:hover{
     width: 10rem;
     background:#222;
     text-align: center;
-    padding: 2rem;
-    margin: 2rem;
+    padding: 1rem;
+    margin: 1rem;
 }
 .about .row .counter .box span{
     font-size: 4rem;
-    color:var(--yellow) ;
+    color:salmon;
 }
 .about .row .counter .box h3{
     font-size: 2rem;
     color:#fff ;
-} */
+} 
+.info .btn{
+    padding: .5rem 1rem;
+    border: 2px solid salmon;
+    border-radius: 18px;
+    background-color: transparent;
+    color: salmon;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+}
 
 /* ---=========about end==============----- */
 
+/*----==========responsivité about=========------*/
+@media (max-width:875px){
+    .about .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .about .row .info{
+        width: 80%;
+        margin: 0 auto;
+        flex: 1 1 30rem;
+        padding: 1rem 1rem;
+    }
+    .about .row .counter{
+        flex: 1 1 48rem;
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap:wrap;
+    }
+    .about .row .counter .box{
+        width: 10rem;
+        background:#222;
+        text-align: center;
+        padding: 2rem;
+        margin: 2rem;
+    }
+}
 /*  ===========education============ */
+.eduaction{
+    width: 80%;
+    margin: 0 auto;
+
+}
 .education .box-container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 1rem 0;
-    padding-left: 3rem;
+   
 
  }
  .education .box-container .box{
+    display:inline-block;
     width: 27rem;
     margin: 4rem 1rem ;
     padding-left: 4rem;
     border-left: .2rem solid #fff;
     position : relative;
+    
 
  }
  .education .box-container .box span{
@@ -304,7 +371,7 @@ nav a::after:hover{
     text-align: center;
     font-size: 2rem;
     color: #fff;
-    background: var(--yellow);
+    background: salmon
  }
 
 /* ----==========My education ends=============------ */
@@ -312,7 +379,11 @@ nav a::after:hover{
 
 
 
-
+/* ----==========Contact start=============------ */
+.contact{
+    width: 80%;
+    margin: 0 auto;
+}
 
 /* ----==========footer=============------ */
 footer{
@@ -341,7 +412,7 @@ footer .footer-right ul li a{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #eee;
+    color: salmon;
     height: 40px;
     width: 40px;
     border-radius: 50%;
