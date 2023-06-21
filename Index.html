@@ -17,9 +17,9 @@
             <nav>
                 <a href="#ancre1">About me</a>
                 <a href="#ancre2">Education</a>
-                <a href="#">Skills</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
+                <a href="#ancre3">Skills</a>
+                <a href="#ancre4">Portfolio</a>
+                <a href="#ancre5">Contact</a>
                 <a href="meteo.html">Météo</a>
             </nav>
         </header>
@@ -58,7 +58,8 @@
                 <h3> <span> qualification :</span> Ingenieur</h3>
                 <h3> <span> post :</span> full stack developer and data manager in omicron</h3>
                 <h3> <span> language :</span> anglais</h3>
-                <a href="#"><button class="btn">download CV <i class="fas fa-download"></i></button></a>
+                <a href="#"><button class="btn1">download CV <i class="fas fa-download"></i></button></a>
+                <a href="mailto:dieudonnepaqui@gmail.com"  class="btn2">hire me </a>
             </div>
             <div class="counter">
                 <div class="box">
@@ -122,9 +123,19 @@
     </section>
 
     <!-- education section ends -->
+    <!-- sills section starts -->
+    <section class="skills" id="skills">
+        <h1 class="heading"> my <span>skills</span> </h1>
+        <div class="box-container">
+            <img src="user1.jpg" alt="">
+        </div>
+
+        
+    </section>
+<!-- skills section ends -->
     <!-- porfolio section starts -->
     <section class="portfolio" id="portfolio">
-        <h1 class="heading"> my <span>portfolio</span> </h1>
+        <h1 class="heading" id="ancre4"> my <span>portfolio</span> </h1>
         <div class="box-container">
             <img src="user1.jpg" alt="">
         </div>
@@ -135,13 +146,15 @@
 
  <!-- Contact section starts -->
  <section class="contact" id="contact">
-    <h1 class="heading"> Contact <span>me</span> </h1>
-    <div class="Formular">
-       <input type="text" name="name" id="name">
-       <input type="email" name="email" id="email">
-        <a href="#"><button class="btn">Send me<i class="fas fa-send"></i></button></a>
-    </div>
-    <div class="box-container">
+    <h1 class="heading" id="ancre5"> Contact <span>me</span> </h1>
+    <form action="">
+        <div class="formular">
+            <h1>Let's move on your project</h1>
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="submit" value="send me" class="btn3">
+        </div>
+    </form>
     
 </section>
 <!-- Contact section ends -->

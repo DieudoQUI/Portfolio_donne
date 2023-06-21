@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     text-transform: capitalize;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 body{
      background:#555 
@@ -54,7 +55,7 @@ header{
 }
 nav{
     padding: 0px 2.5rem;
-    word-spacing: 0.5rem;
+    word-spacing: 0.4rem;
     color: #eee;
 }
 nav a{
@@ -153,7 +154,6 @@ nav a::after:hover{
     color:salmon;
     transform: skew(1,2);
 }
-
 
 .banner-image{
     width: 50%; 
@@ -276,12 +276,24 @@ nav a::after:hover{
     font-size: 2rem;
     color:#fff ;
 } 
-.info .btn{
+.info .btn1{
     padding: .5rem 1rem;
     border: 2px solid salmon;
     border-radius: 18px;
     background-color: transparent;
     color: salmon;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.info .btn2{
+    padding: .5rem 1rem;
+    border: 2px solid #eee;
+    border-radius: 18px;
+    background-color: transparent;
+    background: salmon;
+    color: #eee;
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
@@ -329,7 +341,6 @@ nav a::after:hover{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-   
 
  }
  .education .box-container .box{
@@ -384,14 +395,68 @@ nav a::after:hover{
     width: 80%;
     margin: 0 auto;
 }
+form{
+    width:60%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 2px solid #999;
+}
+.formular h1{
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 27px;
+    color: #eee;
+    font-weight: 700;
+}
+.formular{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/* .formular:nth(1){
+    padding-top: 2rem;
+} */
+input{
+    margin: 0px auto;
+    outline: none;
+    background: none;
+    border: none;
+    width: 80%;
+    height: 50px;
+    color: #eee;
+    background-color: salmon;
+}
+.formular .btn3{
+    width: 30%;
+    margin: 0 auto;
+    height: 30px;
+    padding: .5rem .75rem;
+    border: 2px solid salmon;
+    border-radius: 18px;
+    background-color: transparent;
+    color: salmon;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 1rem 0rem;
+
+}
+::placeholder{
+    color: #eee;
+    font-size: 25px;
+
+}
 
 /* ----==========footer=============------ */
 footer{
-    width: 100%;
-  /*   height: 500px;
-    margin: 0 auto; */
-    margin: 5rem 0 0 0;
-    border-top: 1px solid #555;
+    width: 80%;
+   
+    margin: 0 auto;
+    border-top: 2px solid #555;
+    padding: 5rem 0 2rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
