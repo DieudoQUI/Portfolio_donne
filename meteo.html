@@ -37,7 +37,7 @@
                     <span id="sp2"></span>
                 </div>
                 <div class="box-sun box">
-                    <h2  class="fa-solid fa-raindrops">Pluie</h2>
+                    <h2>Pluie</h2>
                     <span id="sp3"></span>
                 </div>
                 <div class="box-rain box">
@@ -60,7 +60,7 @@
             const city = document.getElementById('CityInput').value;
             /* const formWeather = document.getElementById('formWeather'); */
             const apiKey = ('8062d9b8fd5de215e4a24389d7fffb7b');
-            const apiUrl = (`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
+            const apiUrl = (`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}&lang=fr`);
             console.log(city)
 
             fetch(apiUrl)
@@ -69,10 +69,10 @@
                 let element = document.getElementById('cityCheck') 
             element.innerHTML=city;
             document.getElementById('cityCheck').innerHTML=data.name;
-            document.getElementById('sp1').innerHTML=data.wind.speed;
-            document.getElementById('sp2').innerHTML=data.clouds.all
-            document.getElementById('sp3').innerHTML=data.rain.h;
-            document.getElementById('sp4').innerHTML=data.main.temp;
+            document.getElementById('sp1').innerHTML=data.wind.speed + 'Km/h';
+            document.getElementById('sp2').innerHTML=data.weather[0].description;
+            document.getElementById('sp3').innerHTML=data.main.humidity + '%';
+            document.getElementById('sp4').innerHTML=data.main.temp + '°';
             })       
         }
 

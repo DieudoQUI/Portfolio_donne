@@ -6,13 +6,18 @@
 }
 body{
     background: linear-gradient(to left, #eee , #eee);
+    background-image: url(Images/Landred.jpg);
+    background-size: cover;
+    background-position: center;
+    
 }
 .wrap{
     width: 60%;
-    max-height: auto;
+    height: auto ;
     margin: 0 auto;
-    background-color: rgb(161, 190, 181);
-    
+    /* background-color: rgb(161, 190, 181) */;
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
 }
 .containerForm{
     width: 60%;
@@ -110,18 +115,63 @@ button{
 .box{
     margin: 10px auto;
     width: 10rem;
-    height: 100px;
+    height: 125px;
     color: gray;
     border: 5px dotted rgb(161, 190, 181);
    
 }
 .box h2{
+    margin-bottom: 2rem;
     text-align: center;
     color: green;
 }
 .box span{
     width: 50px;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     color: blue;
+}
+
+/* responsivité */
+@media (max-width:1012px){
+    .wrap{
+        width: 80%;
+        height: auto ;
+        margin: 0 auto;
+        /* background-color: rgb(161, 190, 181) */;
+        backdrop-filter: blur(5px);
+        border-radius: 25px;
+    }
+}
+@media (max-width:725px){
+    .wrap{
+        width: 90%;
+        height: auto ;
+        margin: 0 auto;
+        /* background-color: rgb(161, 190, 181) */;
+        backdrop-filter: blur(5px);
+        border-radius: 25px;
+    }
+}
+@media (max-width:639px){
+    .wrap{
+        width: 90%;
+        height: 100% ;
+        margin: 0 auto;
+        /* background-color: rgb(161, 190, 181) */;
+        backdrop-filter: blur(5px);
+        border-radius: 25px;
+    }
+}
+@media (max-width:395px){
+    .wrap{
+        width: 24rem;
+        max-height: 100% ;
+        margin: 0 auto;
+        /* background-color: rgb(161, 190, 181) */;
+        backdrop-filter: blur(5px);
+        border-radius: 25px;
+    }
 }

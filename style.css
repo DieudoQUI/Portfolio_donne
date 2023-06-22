@@ -7,6 +7,9 @@
 body{
      background:#555 
 }
+img{
+    width: 100%;
+}
 a{
     text-decoration: none;
 }
@@ -165,9 +168,8 @@ nav a::after:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-   /*  transition: transform infinite  ease-in-out;
-        transition: transform 10s ease-in-out; */
-    animation : tourne 5s infinite ease-in-out; 
+    transition: transform infinite  ease-in-out;
+    /* animation : tourne 5s infinite ease-in-out;  */
 }
 @keyframes tourne{
     50%{
@@ -180,10 +182,10 @@ nav a::after:hover{
         
     }
 }
- .banner-image .polygon:hover{
+.banner-image .polygon:hover{
      transform: rotate(360deg);
 
- }
+}
 
 .banner-text .banner-image .polygon .polygon1{
     width: 500px;
@@ -334,15 +336,13 @@ nav a::after:hover{
 .eduaction{
     width: 80%;
     margin: 0 auto;
-
 }
 .education .box-container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-
- }
+}
  .education .box-container .box{
     display:inline-block;
     width: 27rem;
@@ -350,46 +350,162 @@ nav a::after:hover{
     padding-left: 4rem;
     border-left: .2rem solid #fff;
     position : relative;
-    
-
- }
+}
  .education .box-container .box span{
     font-size: 1.5rem;
     background:#222;
     color: #fff;
     border-radius: 5rem;
     padding: .5rem 2.5rem;
- }
- .education .box-container .box h3{
+}
+.education .box-container .box h3{
     font-size: 2rem;
     color: #fff;
     padding-top: 1.5rem;
- }
- .education .box-container .box p{
+}
+.education .box-container .box p{
     font-size: 1.4rem;
     color: #fff;
     padding-top: 1rem 0;
- }
+}
 
- .education .box-container .box i{
+.education .box-container .box i{
     position: absolute;
     top: -1.5rem;
     left: -2.5rem;
     height: 5rem;
-    width:5rem ;
+    width:5rem;
     border-radius: 50%;
     line-height: 5rem;
     text-align: center;
     font-size: 2rem;
     color: #fff;
     background: salmon
- }
+}
 
 /* ----==========My education ends=============------ */
 
+/* ----==========My skills starts=============------ */
+.skills-content{
+    width: 70%;
+    margin: 0 auto;
+   /*  display: flex;
+    flex-direction: column;
+    gap: 25px; */
 
-
-
+}
+.skills-content .skills-content-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 25px 0;
+}
+.skills-content-child_left_item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 10%;
+    color: #eee;
+}
+.skills-content-child:nth-child(1){
+    margin-top: 25px;
+}
+.skills-content-child:last-child{
+    margin-bottom: 25px;
+}
+.skills-content-child_right_item{
+    width: 90%;
+    height: 15px;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    background-color: #fff;
+}  
+.skills-content-child_right_item_span1{
+    display: inline-block;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span2{
+    display: inline-block;
+    width: 83%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span3{
+    display: inline-block;
+    justify-content: center;
+    width: 90%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span4{
+    display: inline-block;
+    justify-content: center;
+    width: 70%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span5{
+    display: inline-block;
+    justify-content: center;
+    width: 70%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span6{
+    display: inline-block;
+    justify-content: center;
+    width: 85%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span7{
+    display: inline-block;
+    justify-content: center;
+    width: 83%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span8{
+    display: inline-block;
+    justify-content: center;
+    width: 79%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span9{
+    display: inline-block;
+    justify-content: center;
+    width: 88%;
+    height: 15px;
+    background-color: salmon;  
+}
+.skills-content-child_right_item_span10{
+    display: inline-block;
+    justify-content: center;
+    width: 77%;
+    height: 15px;
+    background-color: salmon;  
+}
+/* ----==========My portfolio start=============------ */
+.portfolio{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.portfolio_box:nth-child(1){
+    margin-top: 30px;
+}
+.portfolio_box:nth-child(5){
+    margin-bottom: 30px;
+}
 /* ----==========Contact start=============------ */
 .contact{
     width: 80%;
@@ -428,11 +544,12 @@ input{
     height: 50px;
     color: #eee;
     background-color: salmon;
+    font-size: 25px;
 }
 .formular .btn3{
     width: 30%;
-    margin: 0 auto;
-    height: 30px;
+    margin: 20px auto;
+    display: block;
     padding: .5rem .75rem;
     border: 2px solid salmon;
     border-radius: 18px;
@@ -441,26 +558,21 @@ input{
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    margin: 1rem 0rem;
-
 }
 ::placeholder{
     color: #eee;
     font-size: 25px;
-
 }
-
+/* ----==========Contact ends=============------ */
 /* ----==========footer=============------ */
 footer{
     width: 80%;
-   
     margin: 0 auto;
     border-top: 2px solid #555;
     padding: 5rem 0 2rem 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
  footer .footer-left a{
      color: #eee;
